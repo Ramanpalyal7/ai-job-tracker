@@ -4,6 +4,8 @@ import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
 import Layout from "./Layout/Layout";
+import Signup from "./pages/Signup";
+
 function App() {
 
 const router = createBrowserRouter(
@@ -20,15 +22,21 @@ const router = createBrowserRouter(
             path:"/dashboard",
             element:<Dashboard/>
           },
-          {
-            path:"/login",
-            element:<Login/>
-          },
           { // may be it known as wildcard path as user got to any unkown path will get navigate to this not found page . 
             path:"*",
             element:<NotFound/>
           }
-        ]
+        ],
+
+      },
+      {   
+            path:"/login",
+            element:<Login/>
+     },
+
+      {
+        path:"/signup",
+        element:<Signup/>
       }
 
     ]
