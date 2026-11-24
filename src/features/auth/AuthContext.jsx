@@ -64,7 +64,7 @@ export function AuthProvider  ({ children }) {
 
   // login or signIn for existing users
 
-  const login = async(email,password) =>{
+  const logIn = async(email,password) =>{
   const { error } = await supabase.auth.signInWithPassword({
       email,
       password
@@ -86,7 +86,7 @@ export function AuthProvider  ({ children }) {
 
 
   return(
-   <AuthContext.Provider value={ { user, loading , signUp , login , logOut } }>
+   <AuthContext.Provider value={ { user, loading , signUp , logIn , logOut } }>
     {children}
     </AuthContext.Provider>
 )
